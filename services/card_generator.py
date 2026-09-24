@@ -117,7 +117,7 @@ class CardGenerator:
             logger.error(f"Failed to generate card for seed {seed_id}: {e}")
             return None
 
-    def _draw_mistake_card(self, draw: ImageDraw.ImageDraw, facts: Dict[str, Any], margin: int):
+    def _draw_mistake_card(self, draw: Any, facts: Dict[str, Any], margin: int):
         title_font = self._get_font(48)
         content_font = self._get_font(52)
         rule_font = self._get_font(36)
@@ -143,7 +143,7 @@ class CardGenerator:
         wrapped_rule = textwrap.fill(f"Kural: {rule_text}", width=38)
         draw.text((margin + 60, y), wrapped_rule, font=rule_font, fill=self.TEXT_WHITE)
 
-    def _draw_quiz_card(self, draw: ImageDraw.ImageDraw, facts: Dict[str, Any], margin: int):
+    def _draw_quiz_card(self, draw: Any, facts: Dict[str, Any], margin: int):
         title_font = self._get_font(48)
         q_font = self._get_font(54)
         opt_font = self._get_font(42)
@@ -164,7 +164,7 @@ class CardGenerator:
             draw.text((margin + 80, y + 30), opt, font=opt_font, fill=self.TEXT_WHITE)
             y += 140
 
-    def _draw_level_up_card(self, draw: ImageDraw.ImageDraw, facts: Dict[str, Any], margin: int):
+    def _draw_level_up_card(self, draw: Any, facts: Dict[str, Any], margin: int):
         title_font = self._get_font(48)
         content_font = self._get_font(54)
         rule_font = self._get_font(36)
@@ -187,7 +187,7 @@ class CardGenerator:
         wrapped_rule = textwrap.fill(rule, width=38)
         draw.text((margin + 60, y), wrapped_rule, font=rule_font, fill=self.TEXT_WHITE)
 
-    def _draw_standard_phrase_card(self, draw: ImageDraw.ImageDraw, facts: Dict[str, Any], key_term: str, margin: int):
+    def _draw_standard_phrase_card(self, draw: Any, facts: Dict[str, Any], key_term: str, margin: int):
         title_font = self._get_font(48)
         term_font = self._get_font(68)
         content_font = self._get_font(40)
