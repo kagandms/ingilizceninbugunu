@@ -1,0 +1,82 @@
+name: English in Threads Daily Bot
+
+on:
+  schedule:
+    # Lunch Slot: 12:43 TSI (Europe/Istanbul) = 09:43 UTC
+    - cron: '43 9 * * *'
+    # Evening Slot: 20:18 TSI (Europe/Istanbul) = 17:18 UTC
+    - cron: '18 17 * * *'
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Optional manual slot override (e.g. 2026-09-24_LUNCH or 2026-09-24_EVENING)'
+        required: false
+        type: string
+
+# Enforce strict single execution at any time to prevent concurrency collisions
+concurrency:
+  group: english-in-threads-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Random Jitter Delay (Anti-bot pattern)
+        if: github.event_name == 'schedule'
+        run: |
+          # Random sleep between 10 and 180 seconds
+          DELAY=$((10 + RANDOM % 170))
+          echo "Applying random jitter delay of ${DELAY}s..."
+          sleep $DELAY
+
+      - name: Run Pipeline
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_APP_ID: ${{ secrets.THREADS_APP_ID }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          HEALTHCHECKS_PING_URL: ${{ secrets.HEALTHCHECKS_PING_URL }}
+          TELEGRAM_ALERT_BOT_TOKEN: ${{ secrets.TELEGRAM_ALERT_BOT_TOKEN }}
+          TELEGRAM_ALERT_CHAT_ID: ${{ secrets.TELEGRAM_ALERT_CHAT_ID }}
+          DRY_RUN: 'false'
+          LOG_LEVEL: 'INFO'
+          TIMEZONE: 'Europe/Istanbul'
+        run: |
+          SLOT_ARG=""
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            SLOT_ARG="--slot ${{ github.event.inputs.slot }}"
+          fi
+          python main.py $SLOT_ARG
+
+      - name: Notify on Failure
+        if: failure()
+        env:
+          TELEGRAM_ALERT_BOT_TOKEN: ${{ secrets.TELEGRAM_ALERT_BOT_TOKEN }}
+          TELEGRAM_ALERT_CHAT_ID: ${{ secrets.TELEGRAM_ALERT_CHAT_ID }}
+        run: |
+          if [ -n "$TELEGRAM_ALERT_BOT_TOKEN" ] && [ -n "$TELEGRAM_ALERT_CHAT_ID" ]; then
+            MSG="🚨 [GitHub Actions Alert] English in Threads workflow failed! Run ID: ${{ github.run_id }}"
+            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_ALERT_BOT_TOKEN}/sendMessage" \
+              -d "chat_id=${TELEGRAM_ALERT_CHAT_ID}" \
+              -d "text=${MSG}" || true
+          fi

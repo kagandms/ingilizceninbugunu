@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.log
+logs/
+.DS_Store
+temp_cards/
+ChatGPT Image*.png

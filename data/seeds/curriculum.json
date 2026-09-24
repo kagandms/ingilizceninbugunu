@@ -1,0 +1,209 @@
+[
+  {
+    "seed_id": 101,
+    "slot_type": "LUNCH_COMMON_MISTAKE",
+    "key_term": "agree with",
+    "facts": {
+      "rule": "'agree' zaten bir eylemdir; 'am agree' denmez.",
+      "correct_english": "I agree with you",
+      "wrong_english": "I am agree with you",
+      "example_sentence": "I agree with your opinion."
+    },
+    "verified_fallback": "Türkçe düşünüp İngilizce konuşurken en sık düşülen tuzak:\n\n❌ I am agree with you\n✅ I agree with you\n\n'Agree' zaten 'katılmak' anlamına gelen bir fiildir. Başına 'am/is/are' eklenmez.\n\nÖrnek:\n'I agree with your opinion.' (Fikrine katılıyorum.)\n\n💬 Sen bu hatayı daha önce yaptın mı? Dürüstler yoruma!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 102,
+    "slot_type": "EVENING_EXPLANATION",
+    "key_term": "depend on",
+    "facts": {
+      "rule": "'bağlı olmak' anlamında 'depend' fiili daima 'on' edatı ile kullanılır, 'to' veya 'with' kullanılmaz.",
+      "correct_english": "It depends on the weather",
+      "wrong_english": "It depends to the weather",
+      "example_sentence": "Our weekend plan depends on the weather."
+    },
+    "verified_fallback": "İngilizcede prepozisyon tuzakları serisi:\n\n❌ It depends to the weather\n✅ It depends on the weather\n\nTürkçede 'havaya bağlı' derken '-e/-a' yönelme eki olduğu için 'to' kullanmak çekici gelir. Ama 'depend' daima 'on' ile kullanılır.\n\nÖrnek:\n'Our weekend plan depends on the weather.'\n\n💬 Cümleyi tamamla: 'My happiness depends on _______.' Yoruma yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 103,
+    "slot_type": "LUNCH_TEXTBOOK_VS_NATIVE",
+    "key_term": "how are you alternatives",
+    "facts": {
+      "rule": "Ders kitaplarındaki klasik kalıplar yerine sokakta ve iş hayatında doğal alternatifler kullanılır.",
+      "correct_english": "How's it going?",
+      "textbook_english": "How do you do?",
+      "example_sentence": "Hey Mark, how's it going?"
+    },
+    "verified_fallback": "Kitaplarda öğretilen vs Gerçek hayatta duyacağın İngilizce:\n\n📚 Kitap: 'How do you do?'\n🗣️ Sokak / Doğal: 'How's it going?'\n\nYerliler birbirine nadiren aşırı resmi 'How do you do' der. Samimi bir selamlaşmada en yaygın olanı 'How's it going?' kalıbıdır.\n\nÖrnek: 'Hey Mark, how's it going?'\n\n💬 Sen günlük hayatta birine hal hatır sorarken en çok hangi kalıbı kullanıyorsun?",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 104,
+    "slot_type": "EVENING_CONTEXT_TEST",
+    "key_term": "no worries",
+    "facts": {
+      "rule": "'Rica ederim' veya 'sorun değil' derken 'You are welcome' yerine günlük dilde 'No worries' çok yaygındır.",
+      "correct_english": "No worries at all",
+      "textbook_english": "You are welcome",
+      "example_sentence": "Thanks for the help! - No worries at all."
+    },
+    "verified_fallback": "'You are welcome' demekten sıkılanlar için native dokunuşu:\n\nBirisi sana teşekkür ettiğinde veya ufak bir aksaklık için özür dilediğinde:\n✅ 'No worries at all.' (Hiç sorun değil, lafı bile olmaz.)\n\nÖrnek diyalog:\n— 'Thanks for the ride!'\n— 'No worries at all!'\n\n💬 Bugün sana biri teşekkür etseydi ne yanıt verirdin? Yoruma İngilizce yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 105,
+    "slot_type": "LUNCH_PREPOSITION",
+    "key_term": "in / on / at time",
+    "facts": {
+      "rule": "Saatlerde 'at', günlerde 'on', aylarda ve yıllarda 'in' kullanılır.",
+      "correct_english": "at 5 PM, on Monday, in July",
+      "wrong_english": "in Monday, on July",
+      "example_sentence": "The meeting starts at 5 PM on Monday."
+    },
+    "verified_fallback": "Zaman edatlarında altın kural (AT - ON - IN):\n\n🕒 Saatlerde: AT (at 5 PM)\n📅 Günlerde: ON (on Monday)\n📆 Ay ve Yıllarda: IN (in July, in 2026)\n\nÖrnek:\n'The meeting starts at 5 PM on Monday.'\n\nUnutma: Kesin saat varsa 'at', gün adı varsa 'on'!\n\n💬 Doğum günün hangi ayda? 'in' kullanarak yorumlara yaz: 'My birthday is in ______.'",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 106,
+    "slot_type": "EVENING_QUIZ",
+    "key_term": "preposition quiz",
+    "facts": {
+      "question": "I usually drink coffee ____ the morning.",
+      "options": ["A) at", "B) on", "C) in"],
+      "correct_option": "C) in",
+      "quiz_explanation": "Günün bölümlerinde (morning, afternoon, evening) 'in' kullanılır: 'in the morning'."
+    },
+    "verified_fallback": "Günün İngilizce Testi! 🧠\n\nBoşluğa hangi edat gelmeli?\n\n'I usually drink coffee ____ the morning.'\n\nA) at\nB) on\nC) in\n\n💡 İpucu: Günün bölümlerinde (sabah, öğleden sonra) kullanılan kuralı hatırla.\n\n💬 Doğru cevabını (A, B veya C) yoruma yaz! Doğru cevap yarın öğle postunun başında açıklanacak.",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 107,
+    "slot_type": "LUNCH_PHRASAL_VERB",
+    "key_term": "call off",
+    "facts": {
+      "rule": "'call off' bir planı veya etkinliği iptal etmek (cancel) anlamına gelir.",
+      "correct_english": "call off the meeting",
+      "wrong_english": "cancel out the meeting",
+      "example_sentence": "They had to call off the meeting due to heavy rain."
+    },
+    "verified_fallback": "Günün Phrasal Verb'ü: 'CALL OFF' ❌\n\nAnlamı: Bir etkinliği, maçı veya toplantıyı tamamen iptal etmek.\n\nÖrnek:\n'They had to call off the meeting due to heavy rain.'\n(Şiddetli yağmur nedeniyle toplantıyı iptal etmek zorunda kaldılar.)\n\nUnutma: 'Postpone' ertelemek, 'Call off' ise iptal etmektir.\n\n💬 En son neyi 'call off' etmek zorunda kaldın? Yorumlara yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 108,
+    "slot_type": "EVENING_SENTENCE_COMPLETION",
+    "key_term": "give up on",
+    "facts": {
+      "rule": "'give up on' bir şeyden veya birinden ümidi kesmek, pes etmek anlamına gelir.",
+      "correct_english": "never give up on your dreams",
+      "example_sentence": "I will never give up on my dreams."
+    },
+    "verified_fallback": "Akşam Pratiği: Cümleyi Tamamla! ✍️\n\nKalıbımız: 'GIVE UP ON'\nAnlamı: Bir şeyden ümidini kesmek, vazgeçmek.\n\nÖrnek:\n'I will never give up on my dreams.' (Hayallerimden asla vazgeçmeyeceğim.)\n\nŞimdi sıra sende! Cümleyi kendi hayatına göre tamamlayıp yoruma bırak:\n\n'I will never give up on ________.'",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 109,
+    "slot_type": "LUNCH_BUSINESS_ENGLISH",
+    "key_term": "look forward to",
+    "facts": {
+      "rule": "'look forward to' kalıbından sonra gelen fiil daima '-ing' alır.",
+      "correct_english": "I look forward to hearing from you",
+      "wrong_english": "I look forward to hear from you",
+      "example_sentence": "I look forward to working with your team."
+    },
+    "verified_fallback": "İş İngilizcesinde en çok yapılan hata:\n\n❌ I look forward to hear from you\n✅ I look forward to hearing from you\n\n'Look forward to' (dört gözle beklemek) kalıbındaki 'to' bir mastar eki değil, edattır (preposition). Bu yüzden ardından gelen fiil MUTLAKA '-ing' takısı alır.\n\nÖrnek:\n'I look forward to working with you.'\n\n💬 Bu kalıbı daha önce e-postalarda doğru kullanmış mıydın?",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 110,
+    "slot_type": "EVENING_SCENARIO",
+    "key_term": "push back meeting",
+    "facts": {
+      "rule": "Toplantıyı daha ileri bir saate veya tarihe ertelemek için kibarca 'push back' kullanılır.",
+      "correct_english": "Could we push back the meeting by 30 minutes?",
+      "example_sentence": "Something urgent came up. Could we push back our meeting?"
+    },
+    "verified_fallback": "Durum Senaryosu: Toplantıya gecikeceksin! ⏰\n\nPatronuna veya müşterine 'Toplantıyı yarım saat ileriye erteleyebilir miyiz?' demek için en kibar ve profesyonel kalıp:\n\n✅ 'Could we push back the meeting by 30 minutes?'\n\n'Delay' veya 'postpone' yerine yerliler iş ortamında genelde 'push back' der.\n\n💬 Sen iş yerinde geç kalırken genelde ne söylersin? Yoruma bırak!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 111,
+    "slot_type": "LUNCH_LEVEL_UP",
+    "key_term": "tired to exhausted",
+    "facts": {
+      "rule": "'Very' kelimesini sürekli tekrar etmek yerine zengin sıfatlar kullanılır.",
+      "basic_english": "very tired",
+      "advanced_english": "exhausted",
+      "example_sentence": "After working all day, I am completely exhausted."
+    },
+    "verified_fallback": "Kelime Dağarcığını Seviye Atlat (Level Up) 🚀\n\nSürekli 'VERY' demekten kurtul:\n\n🔹 Basic: 'very tired'\n🔸 Advanced: 'exhausted'\n\nÖrnek:\n'After working all day, I am completely exhausted.' (Tüm gün çalıştıktan sonra pestilim çıktı / tükendim.)\n\n'Very tired' demek yanlış değil ama 'exhausted' seni çok daha akıcı gösterir.\n\n💬 Bugün kendini 'exhausted' hissediyor musun? Yoruma yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 112,
+    "slot_type": "EVENING_LEVEL_UP_CARD",
+    "key_term": "important to crucial",
+    "facts": {
+      "rule": "'very important' yerine 'crucial' veya 'vital' kullanmak ifadeyi güçlendirir.",
+      "basic_english": "very important",
+      "advanced_english": "crucial",
+      "example_sentence": "Sleep is crucial for your brain health."
+    },
+    "verified_fallback": "1 Kelimeyi Değiştir, Seviyeni B2'ye Çıkar:\n\n🔹 A2: 'very important'\n🔸 B2/C1: 'crucial' (veya 'vital')\n\nÖrnek:\n'Sleep is crucial for your brain health.'\n(Uyku, beyin sağlığın için hayati önem taşır.)\n\nSürekli 'important' yerine 'crucial' kullanmaya başladığında İngilizcenin tonu anında değişir.\n\n💬 Senin için hayatında en 'crucial' olan şey ne? Cümleni yorumlara bırak!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 113,
+    "slot_type": "SUNDAY_WEEKLY_REVIEW",
+    "key_term": "weekly recap",
+    "facts": {
+      "rule": "Bu hafta öğrenilen 5 anahtar terimin tekrarı.",
+      "weekly_terms": ["agree with", "depend on", "call off", "look forward to", "exhausted"],
+      "example_sentence": "Consistency is key to mastering English."
+    },
+    "verified_fallback": "Haftalık İngilizce Özeti! 🎯\n\nBu hafta akılda tutulması gereken 5 kritik kalıp:\n\n1. I agree with you (am agree değil)\n2. Depend on (to değil)\n3. Call off (iptal etmek)\n4. Look forward to doing (fiil -ing alır)\n5. Exhausted (very tired yerine)\n\nUnutma: Dili öğrenmek değil, tekrar etmek akıcı yapar.\n\n💬 Bu 5 kalıptan en çok hangisi aklında kaldı? Yoruma numarasını yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 114,
+    "slot_type": "LUNCH_COMMON_MISTAKE",
+    "key_term": "listen to",
+    "facts": {
+      "rule": "'listen' fiilinden sonra nesne geliyorsa MUTLAKA 'to' edatı kullanılır.",
+      "correct_english": "listen to music",
+      "wrong_english": "listen music",
+      "example_sentence": "I love listening to podcast episodes."
+    },
+    "verified_fallback": "İngilizcede Türklerin en sık unuttuğu küçük kelime: 'TO'\n\n❌ I am listening music\n✅ I am listening to music\n\n'Hear' (duymak) edat almaz ama 'Listen' (dinlemek) bir şeye kulak vermek olduğu için nesnesinden önce MUTLAKA 'to' ister.\n\nÖrnek:\n'I love listening to podcast episodes.'\n\n💬 Şu an ne dinliyorsun? 'I am listening to ______' şeklinde yoruma yaz!",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  },
+  {
+    "seed_id": 115,
+    "slot_type": "EVENING_QUIZ",
+    "key_term": "listen to quiz",
+    "facts": {
+      "question": "Are you listening ____ me?",
+      "options": ["A) at", "B) to", "C) for"],
+      "correct_option": "B) to",
+      "quiz_explanation": "'Listen' fiili daima 'to' ile kullanılır: 'listening to me'."
+    },
+    "verified_fallback": "Günün İngilizce Testi! 🎧\n\nBoşluğa hangi kelime gelmeli?\n\n'Are you listening ____ me?'\n\nA) at\nB) to\nC) for\n\n💡 İpucu: Birine kulak verirken araya gelen o küçük edatı hatırla.\n\n💬 Doğru tahminini yoruma yaz! Cevap yarın öğle postumuzun başında gelecek.",
+    "verified_at": "2026-09-24T12:00:00Z",
+    "verified_by": "curator"
+  }
+]
